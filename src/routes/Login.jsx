@@ -6,7 +6,7 @@ export default function Login() {
 
   const [usuario, setUsuario] = useState({
     email: "",
-    senha: "", // Corrigi de "senha" para "senha"
+    senha: "", // declaração de constantes
   });
 
   const handleChange = (e) => {
@@ -17,12 +17,14 @@ export default function Login() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
+    //rotas
     try {
       const response = await fetch("http://localhost:5000/usuarios");
       const users = await response.json();
 
       const user = users.find((u) => u.email === usuario.email && u.senha === usuario.senha);
-
+    
+      //mensagem ao se logar
       if (user) {
         alert("Login realizado com SUCESSO!");
 
@@ -43,7 +45,7 @@ export default function Login() {
 
       }
     } catch (error) {
-      console.log(error);
+      console.log(error); //mensagem de erro 
     }
   };
 

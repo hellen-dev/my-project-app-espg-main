@@ -1,3 +1,7 @@
+Ana Laura Juarez Zerlin - RM98065
+Hellen R. G. Assis - RM98284
+
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
